@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -18,16 +19,15 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: 'Post was successfully saved.'
     else
       render :new
     end
   end
 
   def update
-    @post.update
     if @post.update(post_params)
-      redirect_to @post
+      redirect_to @post, notice: 'Post was successfully updated.'
     else
       render :edit
     end
@@ -40,6 +40,10 @@ class PostsController < ApplicationController
 
   private
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
+  
   def post_params
     params.require(:post).permit(:title, :image, :description)
   end
