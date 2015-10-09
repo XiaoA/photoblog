@@ -1,13 +1,21 @@
+/* Navbar Settings */
+/* Set navbar brand color */
+nav.navbar-brand {
+  color: #ed0909;
+}
+
+/* Image Settings */
+/* Set image background and borders */
+
 img {
    padding:1px;
    border:1px solid #69757A;
    background-color:#aeaeae;
 }
 
-.btn a {
-    color: #fff;
-}
+/* Input Form Settings */
+/* Set width of input forms */
 
-.navbar-brand {
-  color: #ed0909;
+.form-control {
+  width: 40%;
 }
