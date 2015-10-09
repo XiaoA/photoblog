@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
+<%= render 'navigation' %>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+  <div class="text-center">
+    <h1><%= @post.title %></h1>
+  </div>
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <%= image_tag(@post.image.full_size.url) %>
+    </div>
+  </div>
+<div class="text-center">  <h4><%= @post.description %></h4>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@post.image.profile_size.url) %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+</div>
