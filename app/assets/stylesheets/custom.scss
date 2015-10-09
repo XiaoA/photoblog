@@ -4,6 +4,11 @@ nav.navbar-brand {
   color: #ed0909;
 }
 
+/* Margin-top for containers below fixed navbar */
+.page-top {
+  margin-top: 100px;
+}
+
 /* Image Settings */
 /* Set image background and borders */
 
@@ -19,3 +24,5 @@ img {
 .form-control {
   width: 40%;
 }
+
+
